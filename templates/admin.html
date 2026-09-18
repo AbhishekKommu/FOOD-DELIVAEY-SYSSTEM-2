@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — FoodHub</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><span class="logo-icon">🍔</span> FoodHub</a>
+      <div class="nav-links" id="navLinks">
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart <span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+        <a href="/orders">Orders</a>
+        <a href="/admin" id="adminLink" style="display:none">Admin</a>
+        <a href="/login" id="loginLink">Login</a>
+        <a href="/register" id="registerLink">Register</a>
+        <button class="btn-logout" id="logoutBtn" style="display:none">Logout</button>
+        <span class="nav-user" id="navUser" style="display:none"></span>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Admin Dashboard</h1>
+    <p>Manage your menu items, orders, and view statistics</p>
+  </div>
+
+  <div class="admin-page">
+    <!-- Stats -->
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card">
+        <div class="stat-icon">🍽️</div>
+        <div class="stat-info"><span class="stat-value" id="menuCount">0</span><span class="stat-label">Menu Items</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-info"><span class="stat-value" id="userCount">0</span><span class="stat-label">Customers</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📦</div>
+        <div class="stat-info"><span class="stat-value" id="orderCount">0</span><span class="stat-label">Total Orders</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-info"><span class="stat-value" id="revenue">$0</span><span class="stat-label">Revenue</span></div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="admin-tabs">
+      <button class="tab-btn active" data-tab="menu">Menu Management</button>
+      <button class="tab-btn" data-tab="orders">Order Management</button>
+    </div>
+
+    <!-- Menu tab -->
+    <div class="tab-content active" id="tabMenu">
+      <div class="admin-section-header">
+        <h2>Menu Items</h2>
+        <button class="btn btn-primary" id="addItemBtn">+ Add New Item</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="adminMenuTable">
+          <thead>
+            <tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Available</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="adminMenuBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Orders tab -->
+    <div class="tab-content" id="tabOrders">
+      <div class="admin-section-header">
+        <h2>All Orders</h2>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="adminOrdersTable">
+          <thead>
+            <tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="adminOrdersBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit modal -->
+  <div class="modal-overlay" id="itemModal" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Add Menu Item</h3>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="alert" id="modalAlert" style="display:none"></div>
+        <form id="itemForm">
+          <input type="hidden" id="itemId" />
+          <div class="form-group">
+            <label for="itemName">Name</label>
+            <input type="text" id="itemName" required />
+          </div>
+          <div class="form-group">
+            <label for="itemDescription">Description</label>
+            <textarea id="itemDescription" rows="3"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="itemPrice">Price ($)</label>
+              <input type="number" id="itemPrice" step="0.01" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="itemCategory">Category</label>
+              <input type="text" id="itemCategory" placeholder="e.g. Pizza, Burgers" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="itemImage">Image URL</label>
+            <input type="url" id="itemImage" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="itemAvailable" checked /> Available for ordering
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Save Item</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FoodHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>

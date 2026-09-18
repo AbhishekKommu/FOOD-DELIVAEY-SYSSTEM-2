@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — FoodHub</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <a href="/" class="nav-logo"><span class="logo-icon">🍔</span> FoodHub</a>
+        <h1>Welcome Back!</h1>
+        <p>Log in to order your favorite meals, track deliveries, and enjoy exclusive deals.</p>
+        <div class="auth-features">
+          <div class="auth-feature">⚡ Fast 30-minute delivery</div>
+          <div class="auth-feature">🍽️ 500+ dishes to choose from</div>
+          <div class="auth-feature">📦 Real-time order tracking</div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Log In</h2>
+        <p class="auth-subtitle">Enter your credentials to access your account</p>
+        <div class="alert" id="alertBox" style="display:none"></div>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Log In</button>
+        </form>
+        <div class="auth-hint">
+          Admin demo: <strong>admin@foodhub.com</strong> / <strong>admin123</strong>
+        </div>
+        <p class="auth-switch">Don't have an account? <a href="/register">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/login.js"></script>
+</body>
+</html>

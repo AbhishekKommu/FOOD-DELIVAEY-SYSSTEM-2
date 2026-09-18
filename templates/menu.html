@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — FoodHub</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><span class="logo-icon">🍔</span> FoodHub</a>
+      <div class="nav-links" id="navLinks">
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart <span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+        <a href="/orders">Orders</a>
+        <a href="/admin" id="adminLink" style="display:none">Admin</a>
+        <a href="/login" id="loginLink">Login</a>
+        <a href="/register" id="registerLink">Register</a>
+        <button class="btn-logout" id="logoutBtn" style="display:none">Logout</button>
+        <span class="nav-user" id="navUser" style="display:none"></span>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Our Menu</h1>
+    <p>Explore our delicious selection of freshly prepared dishes</p>
+  </div>
+
+  <div class="menu-page">
+    <div class="menu-filters" id="categoryFilters">
+      <button class="filter-btn active" data-category="All">All</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for dishes..." />
+    </div>
+    <div class="dish-grid" id="menuGrid">
+      <div class="loading-spinner">Loading menu...</div>
+    </div>
+  </div>
+
+  <!-- Add to cart toast -->
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FoodHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/menu.js"></script>
+</body>
+</html>

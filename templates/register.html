@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — FoodHub</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <a href="/" class="nav-logo"><span class="logo-icon">🍔</span> FoodHub</a>
+        <h1>Join FoodHub!</h1>
+        <p>Create your account and start ordering delicious meals delivered right to your door.</p>
+        <div class="auth-features">
+          <div class="auth-feature">🎉 Exclusive member deals</div>
+          <div class="auth-feature">🛒 Easy cart & checkout</div>
+          <div class="auth-feature">📱 Order from anywhere</div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Fill in your details to get started</p>
+        <div class="alert" id="alertBox" style="display:none"></div>
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" />
+          </div>
+          <div class="form-group">
+            <label for="address">Delivery Address <span class="optional">(optional)</span></label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, City" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Min 6 characters" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="/login">Log in</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/auth.js"></script>
+  <script src="/static/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with fresh mozzarella, basil, and San Marzano tomato sauce on a hand-tossed crust.",
+    "price": 14.99,
+    "category": "Pizza",
+    "image_url": "https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Classic Cheeseburger",
+    "description": "Juicy beef patty with melted cheddar, crisp lettuce, tomato, and house sauce on a brioche bun. Served with fries.",
+    "price": 12.50,
+    "category": "Burgers",
+    "image_url": "https://images.pexels.com/photos/4109233/pexels-photo-4109233.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Salmon Sushi Roll",
+    "description": "Fresh salmon and avocado wrapped in seasoned rice and nori. Served with wasabi and pickled ginger.",
+    "price": 18.99,
+    "category": "Sushi",
+    "image_url": "https://images.pexels.com/photos/30776226/pexels-photo-30776226.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "description": "Al dente spaghetti in a creamy egg and Pecorino Romano sauce with crispy pancetta and black pepper.",
+    "price": 13.75,
+    "category": "Pasta",
+    "image_url": "https://images.pexels.com/photos/546945/pexels-photo-546945.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Grilled Chicken Salad",
+    "description": "Fresh greens, grilled chicken breast, cherry tomatoes, cucumbers, and balsamic vinaigrette.",
+    "price": 10.99,
+    "category": "Salads",
+    "image_url": "https://images.pexels.com/photos/842545/pexels-photo-842545.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a molten center, served with vanilla bean ice cream and fresh berries.",
+    "price": 7.99,
+    "category": "Desserts",
+    "image_url": "https://images.pexels.com/photos/18613262/pexels-photo-18613262.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Crispy Chicken Wings",
+    "description": "Eight crispy fried chicken wings tossed in your choice of buffalo, BBQ, or garlic parmesan sauce.",
+    "price": 11.50,
+    "category": "Appetizers",
+    "image_url": "https://images.pexels.com/photos/9650084/pexels-photo-9650084.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  },
+  {
+    "name": "Pad Thai Noodles",
+    "description": "Stir-fried rice noodles with shrimp, bean sprouts, scrambled egg, and tamarind sauce, garnished with peanuts.",
+    "price": 12.99,
+    "category": "Asian",
+    "image_url": "https://images.pexels.com/photos/39303527/pexels-photo-39303527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+  }
+]
