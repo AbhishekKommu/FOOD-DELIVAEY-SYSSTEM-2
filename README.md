@@ -206,7 +206,7 @@ This project was developed to demonstrate practical knowledge of **full-stack we
 
 ## 👨‍💻 Developer
 
-**Kommu Abhishek**:https://github.com/AbhishekKommu/FFOD-DELIVAEY-SYSSTEM-2/new/main?filename=README.md
+**Kommu Abhishek**:https://github.com/AbhishekKommu/FOOD-DELIVAEY-SYSSTEM-2/edit/main/README.md
 
 
 
